@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="0; url='upi_redirect.php'" />
+<meta http-equiv="refresh" content="0; url='upi://pay?pa=<?php echo $_GET['pa']; ?>&pn=weads&cu=INR'" />
 </head>
 <body>
-<p>Redirecting to UPI payment...</p>
+    <script>
+        if (!navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
+            window.location.href = "upi://pay?pa=<?php echo $_GET['pa']; ?>&pn=weads&cu=INR";
+        } 
+    </script>
+<p>If you are not redirected automatically, please click <a href='upi://pay?pa=<?php echo $_GET['pa']; ?>&pn=weads&cu=INR'>here</a> to open your UPI App.</p>
 </body>
 </html>

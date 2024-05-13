@@ -6,3 +6,4 @@ header("Location: upi://pay?pa=$upi_address&pn=weads&cu=INR");
 exit;
 }
 ?>
+
